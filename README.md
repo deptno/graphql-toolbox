@@ -1,14 +1,16 @@
 # graphql-toolbox
 
-wip
+@wip
 
 ## install
-
 ```shell script
 npm install graphql-toolbox
 ```
 
 ## api
+
+### createConnection
+currently, only `Int` type `Cursor` is supported.(hardcoded)
 
 #### code
 ```graphql
@@ -33,10 +35,10 @@ type PageInfo {
 }
 
 scalar A
-scalar Cursor
+scalar Cursor # Currently only Int type is supported
 ```
-#### code
 
+#### code
 ```ts
 async function aConnection(parent, args, context) {
     const {after, first} = args
@@ -57,12 +59,16 @@ async function aConnection(parent, args, context) {
 ```
 ### bridge
 > todo:
+
 ### bridgeArgs
 > todo:
+
 ### createEdge
 > todo:
+
 ### createEdges
 > todo:
+
 ### createPageInfo
 > todo:
 

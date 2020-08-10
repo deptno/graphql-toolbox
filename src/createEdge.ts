@@ -1,6 +1,6 @@
-export const createEdge = (map, createCursor) => (d, index: number) => {
+export const createEdge = (map, after) => (d, index: number) => {
   const node = map(d)
-  const cursor = createCursor(index)
+  const cursor = after + index
 
   return {node, cursor}
 }

@@ -1,8 +1,9 @@
 import {createEdges} from './createEdges'
 import {createPageInfo} from './createPageInfo'
 
-export const createConnection = ({after, first, map, data, totalCount}: Input) => {
-  const edges = createEdges(map, (index) => after + index)(data)
+export const createConnection = <T>(input: Input<T>) => {
+  const {after, first, map = d => d, data, totalCount} = input
+  const edges = createEdges(map, after)(data)
   const pageInfo = createPageInfo({
     totalCount,
     edges,
@@ -13,10 +14,10 @@ export const createConnection = ({after, first, map, data, totalCount}: Input) =
   return {edges, pageInfo, totalCount}
 }
 
-type Input = {
-  map<T, U>(d: T): U
+type Input<T> = {
+  map?<U>(d: T): U
   after: number
   first: number
-  data: unknown[]
+  data: T[]
   totalCount: number
 }
