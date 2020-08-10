@@ -1,0 +1,37 @@
+{
+  "name": "graphql-toolbox",
+  "version": "0.1.0",
+  "description": "graphql toolbox",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deptno/graphql-toolbox.git"
+  },
+  "keywords": [
+    "graphql",
+    "toolbox",
+    "createConnection"
+  ],
+  "author": "Bonggyun Lee <deptno@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deptno/graphql-toolbox/issues"
+  },
+  "homepage": "https://github.com/deptno/graphql-toolbox#readme",
+  "peerDependencies": {
+    "graphql": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.9",
+    "babel-jest": "^26.2.2",
+    "jest": "^26.2.2",
+    "typescript": "^3.9.7"
+  }
+}
