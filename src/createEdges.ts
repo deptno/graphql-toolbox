@@ -2,5 +2,5 @@ import {createEdge} from './createEdge'
 
 export const createEdges =
 (map, after) =>
-  (list: unknown[]) => list.map(createEdge(map, after))
+  <T>(list: T[]) => list.map(createEdge(map, after))
 

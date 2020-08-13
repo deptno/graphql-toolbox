@@ -1,1 +1,1 @@
-export const bridgeArgs = (parent, args) => args
+export const bridgeArgs: any = (parent, args) => args
