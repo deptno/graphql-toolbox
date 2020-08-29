@@ -1,9 +1,9 @@
 import {createDynamoDbEdges} from './createDynamoDbEdges'
 
-export const createDynamoDbConnection = <T, _Cursor>(input: Input<T>) => {
+export const createDynamoDbConnection = <T>(input: Input<T>) => {
   const {after, first, map = d => d, data, totalCount} = input
   const edges = createDynamoDbEdges(map)(data)
-  const endCursor = edges[edges.length - 1].cursor
+  const endCursor = edges[edges.length - 1]?.cursor
 
   return {
     edges,
