@@ -19,7 +19,7 @@ export const createDynamoDbConnection = <T>(input: Input<T>) => {
 }
 
 type Input<T> = {
-  map?<U>(d: T): U
+  map?(d: T): any
   after: string
   first: number
   data: T[]
