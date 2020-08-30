@@ -1,6 +1,6 @@
-export const createDynamoDbEdge = <T>(map: (d: T) => [T, string]) => (d) => {
-  const [node, cursor] = map(d)
+export const createDynamoDbEdge = <T, U>(map: (d: T) => U) => (d) => {
+  const node = map(d)
 
-  return {node, cursor}
+  return {node}
 }
 

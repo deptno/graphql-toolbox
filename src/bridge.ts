@@ -1,1 +1,1 @@
-export const bridge: any = () => ({})
+export const bridge = () => ({} as any)
